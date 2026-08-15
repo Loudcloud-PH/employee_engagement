@@ -1,5 +1,5 @@
 class ReimbursementsController < InheritedResources::Base
-  http_basic_authenticate_with name: ENV["HTTP_AUTH_USERNAME"], password: ENV["HTTP_AUTH_PASSWORD"]
+  http_basic_authenticate_with name: ENV["HTTP_AUTH_USERNAME"], password: ENV["HTTP_AUTH_PASSWORD"] if ENV["HTTP_AUTH_USERNAME"].present? && ENV["HTTP_AUTH_PASSWORD"].present?
 
   before_action :categories, only: [ :index, :new, :create ]
   before_action :employees, only: [ :index, :new, :create ]

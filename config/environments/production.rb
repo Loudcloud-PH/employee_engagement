@@ -82,8 +82,8 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name: Rails.application.credentials.smtp[:username],
-    password: Rails.application.credentials.smtp[:password],
+    user_name: Rails.application.credentials.dig(:smtp, :username),
+    password: Rails.application.credentials.dig(:smtp, :password),
     address: "smtp-pulse.com",
     port: 2525,
     authentication: :login,
