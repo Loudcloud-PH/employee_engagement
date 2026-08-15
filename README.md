@@ -77,6 +77,7 @@ The image is a multi-stage build that:
 | `RAILS_MASTER_KEY` | yes (or `SECRET_KEY_BASE`) | decrypts `config/credentials.yml.enc`; there is no `config/master.key` in the repo |
 | `POSTGRESQL_USERNAME` | yes | from the Coolify PostgreSQL service |
 | `POSTGRESQL_PASSWORD` | yes | from the Coolify PostgreSQL service |
+| `POSTGRESQL_DATABASE` | no | defaults to `postgres` |
 | `HTTP_AUTH_USERNAME` | no | enables HTTP basic auth on the public reimbursements pages; must be set together with `HTTP_AUTH_PASSWORD` |
 | `HTTP_AUTH_PASSWORD` | no | see `HTTP_AUTH_USERNAME` |
 | `PORT` | no | defaults to `3000` |
